@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Ecs.Components
+namespace PlayerGameplay.Components
 {
     public struct UserInputComponent
     {

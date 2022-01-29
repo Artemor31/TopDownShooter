@@ -1,6 +1,6 @@
-﻿using Ecs.Components;
-using Ecs.Configuration;
+﻿using Ecs.Configuration;
 using Leopotam.Ecs;
+using PlayerGameplay.Components;
 using UnityEngine;
 
 namespace Ecs.Systems

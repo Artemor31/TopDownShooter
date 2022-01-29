@@ -1,9 +1,8 @@
-using Ecs.Components;
 using Leopotam.Ecs;
+using PlayerGameplay.Components;
 using UnityEngine;
 
-
-namespace Ecs.Systems
+namespace PlayerGameplay.Systems
 {
     sealed class GetUserInputSystem : IEcsRunSystem
     {
@@ -18,6 +17,11 @@ namespace Ecs.Systems
                 _world.NewEntity()
                       .Get<UserInputComponent>()
                       .MoveInput = moveInput;
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                _world.NewEntity().Get<FireButtonPressedEvent>();
             }
         }
     }

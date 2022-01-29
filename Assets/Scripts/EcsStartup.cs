@@ -1,7 +1,8 @@
-using Ecs.Components;
 using Ecs.Configuration;
 using Ecs.Systems;
 using Leopotam.Ecs;
+using PlayerGameplay.Components;
+using PlayerGameplay.Systems;
 using UnityEngine;
 
 namespace Ecs.Services
@@ -9,6 +10,7 @@ namespace Ecs.Services
     sealed class EcsStartup : MonoBehaviour
     {
         [SerializeField] private Configuraion _configuraion;
+        [SerializeField] private Shooting.BulletsPool.BulletsPool _pool;
         
         EcsWorld _world;
         EcsSystems _initSystems;
@@ -25,9 +27,12 @@ namespace Ecs.Services
 
             _updateSystems.Add(new PlayerInitSystem())
                 .OneFrame<UserInputComponent>()
+                .OneFrame<FireButtonPressedEvent>()
                 .Add(new GetUserInputSystem())
                 .Add(new MovePlayerSystem())
-                .Inject(_configuraion);
+                .Add(new PlayerFireSystem())
+                .Inject(_configuraion)
+                .Inject(_pool);
             
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);

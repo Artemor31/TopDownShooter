@@ -1,5 +1,5 @@
-using Ecs.Components;
 using Leopotam.Ecs;
+using PlayerGameplay.Components;
 using UnityEngine;
 
 namespace Ecs.Systems

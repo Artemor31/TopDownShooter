@@ -41,24 +41,30 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
-     <Compile Include="Assets\Ecs\Utils\Extentions.cs" />
-     <Compile Include="Assets\Ecs\Systems\MovePlayerSystem.cs" />
-     <Compile Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
-     <Compile Include="Assets\Ecs\Components\PlayerComponent.cs" />
-     <Compile Include="Assets\Ecs\Systems\PlayerInitSystem.cs" />
-     <Compile Include="Assets\Ecs\Components\UserInputComponent.cs" />
-     <Compile Include="Assets\Ecs\Services\EcsStartup.cs" />
-     <Compile Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
-     <Compile Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
-     <Compile Include="Assets\Ecs\Systems\GetUserInputSystem.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Events\FireButtonPressedEvent.cs" />
+     <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
+     <Compile Include="Assets\Scripts\Utils\Extentions.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Systems\MovePlayerSystem.cs" />
+     <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Components\PlayerComponent.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Systems\PlayerInitSystem.cs" />
+     <Compile Include="Assets\Scripts\Shooting\BulletsPool\BulletsPoolManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Components\UserInputComponent.cs" />
+     <Compile Include="Assets\Scripts\EcsStartup.cs" />
+     <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Systems\PlayerFireSystem.cs" />
+     <Compile Include="Assets\Scripts\Shooting\BulletsPool\Bullet.cs" />
+     <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Systems\GetUserInputSystem.cs" />
      <Compile Include="Assets\ThirdPartyAssets\UI\UI pack\Scripts\FillValueNumber.cs" />
-     <Compile Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
-     <Compile Include="Assets\Ecs\Configuration\Configuraion.cs" />
-     <None Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
-     <None Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
+     <Compile Include="Assets\Scripts\Shooting\BulletsPool\BulletsPool.cs" />
+     <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
+     <Compile Include="Assets\Scripts\PlayerGameplay\Configuration\Configuraion.cs" />
+     <Compile Include="Assets\Scripts\Shooting\BulletsPool\BulletPoolConfiguration.cs" />
+     <None Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
+     <None Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
      <None Include="Assets\ThirdPartyAssets\UI\UI pack\Documentation.txt" />
-     <None Include="Assets\ThirdPartyAssets\UI\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />
+     <None Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />
      <Reference Include="UnityEngine">
      <HintPath>O:/UnityEditorFolder/2021.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
