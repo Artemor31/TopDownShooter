@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
-namespace BulletsPool
+
+namespace Pooling
 {
-    [CreateAssetMenu(fileName = "Pooling", menuName = "BulletPoolConfig", order = 0)]
+     [CreateAssetMenu(fileName = "Pooling", menuName = "BulletPoolConfig", order = 0)]
     public class BulletPoolConfiguration : ScriptableObject
     {
         public GameObject BulletPrefab;

@@ -1,10 +1,9 @@
 ﻿using System;
-using BulletsPool;
+using Pooling;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Shooting.BulletsPool
-{
+
     public class BulletsPoolManager : MonoBehaviour
     {
         [SerializeField] private BulletPoolConfiguration _configuration;
@@ -19,7 +18,6 @@ namespace Shooting.BulletsPool
         public Bullet GetBullet()
         {
             var bullet = _pool.PopBullet();
-            
+            return new Bullet();
         }
     }
-}

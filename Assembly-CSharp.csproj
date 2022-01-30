@@ -61,6 +61,8 @@
      <Compile Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerGameplay\Configuration\Configuraion.cs" />
      <Compile Include="Assets\Scripts\Shooting\BulletsPool\BulletPoolConfiguration.cs" />
+     <Compile Include="Assets\Scripts\Shooting\Components\BulletComponent.cs" />
+     <Compile Include="Assets\Scripts\Shooting\Systems\BulletsMoveSystem.cs" />
      <None Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
      <None Include="Assets\ThirdPartyAssets\Gameplay\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
      <None Include="Assets\ThirdPartyAssets\UI\UI pack\Documentation.txt" />

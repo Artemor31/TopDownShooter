@@ -1,14 +1,13 @@
 ﻿using System;
+using Pooling;
 using UnityEngine;
 
-namespace BulletsPool
-{
-    public class Bullet : MonoBehaviour
+   public class Bullet : MonoBehaviour
     {
         [SerializeField] private float _speed;
-        private Shooting.BulletsPool.BulletsPool _pool;
+        private BulletsPool _pool;
 
-        public void SetParentPool(Shooting.BulletsPool.BulletsPool pool) => _pool = pool;
+        public void SetParentPool(BulletsPool pool) => _pool = pool;
 
         public void PoolBack() => _pool.StackBullet(this);
 
@@ -17,4 +16,3 @@ namespace BulletsPool
             transform.position += Vector3.right * (Time.deltaTime * _speed);
         }
     }
-}

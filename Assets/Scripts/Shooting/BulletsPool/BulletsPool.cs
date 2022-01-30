@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using BulletsPool;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Shooting.BulletsPool
+namespace Pooling
 {
     public class BulletsPool
     {
@@ -14,11 +13,11 @@ namespace Shooting.BulletsPool
         {
             this._configuration = _configuration;
         }
-        
+
         public void Initialize()
         {
             _objects = new Stack<Bullet>(_configuration.PoolSize);
-            
+
             for (int i = 0; i < _configuration.PoolSize; i++)
             {
                 StackNewBullet();
@@ -30,7 +29,7 @@ namespace Shooting.BulletsPool
             var gameObj = Object.Instantiate(_configuration.BulletPrefab);
             var bullet = gameObj.GetComponent<Bullet>();
             _objects.Push(bullet);
-            
+
             bullet.SetParentPool(this);
             gameObj.SetActive(false);
         }

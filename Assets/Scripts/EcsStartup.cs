@@ -3,6 +3,7 @@ using Ecs.Systems;
 using Leopotam.Ecs;
 using PlayerGameplay.Components;
 using PlayerGameplay.Systems;
+using Pooling;
 using UnityEngine;
 
 namespace Ecs.Services
@@ -10,7 +11,7 @@ namespace Ecs.Services
     sealed class EcsStartup : MonoBehaviour
     {
         [SerializeField] private Configuraion _configuraion;
-        [SerializeField] private Shooting.BulletsPool.BulletsPool _pool;
+        [SerializeField] private BulletsPool _pool;
         
         EcsWorld _world;
         EcsSystems _initSystems;

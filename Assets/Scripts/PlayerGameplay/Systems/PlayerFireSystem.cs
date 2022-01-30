@@ -1,13 +1,16 @@
-using BulletsPool;
 using Leopotam.Ecs;
 using PlayerGameplay.Components;
+using Pooling;
 using UnityEngine;
 
 namespace PlayerGameplay.Systems
 {
+
+    public delegate void Test(int a);
+    
     sealed class PlayerFireSystem : IEcsRunSystem
     {
-        private Shooting.BulletsPool.BulletsPool _bulletsPool;
+        private BulletsPool _bulletsPool;
         private readonly EcsWorld _world = null;
         private EcsFilter<FireButtonPressedEvent> _filter = default;
 
@@ -17,7 +20,6 @@ namespace PlayerGameplay.Systems
             {
                 var bullet = _bulletsPool.PopBullet();
                 bullet.gameObject.SetActive(true);
-                Debug.Log("<color=red>FIRE</color>"); 
             }
         }
     }
