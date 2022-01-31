@@ -2,7 +2,7 @@
 using Pooling;
 using UnityEngine;
 
-   public class Bullet : MonoBehaviour
+   public class BulletView : MonoBehaviour
     {
         [SerializeField] private float _speed;
         private BulletsPool _pool;

@@ -5,9 +5,6 @@ using UnityEngine;
 
 namespace PlayerGameplay.Systems
 {
-
-    public delegate void Test(int a);
-    
     sealed class PlayerFireSystem : IEcsRunSystem
     {
         private BulletsPool _bulletsPool;

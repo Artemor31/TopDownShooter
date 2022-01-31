@@ -11,7 +11,6 @@ namespace Ecs.Services
     sealed class EcsStartup : MonoBehaviour
     {
         [SerializeField] private Configuraion _configuraion;
-        [SerializeField] private BulletsPool _pool;
         
         EcsWorld _world;
         EcsSystems _initSystems;
@@ -32,8 +31,7 @@ namespace Ecs.Services
                 .Add(new GetUserInputSystem())
                 .Add(new MovePlayerSystem())
                 .Add(new PlayerFireSystem())
-                .Inject(_configuraion)
-                .Inject(_pool);
+                .Inject(_configuraion);
             
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
