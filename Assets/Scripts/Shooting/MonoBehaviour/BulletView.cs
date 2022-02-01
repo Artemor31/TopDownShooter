@@ -1,18 +1,20 @@
 ﻿using System;
-using Pooling;
+using Leopotam.Ecs;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
-   public class BulletView : MonoBehaviour
+[RequireComponent(typeof(Collider))]
+public class BulletView : MonoBehaviour
+{
+    private EcsWorld _world;
+
+    public void Init(EcsWorld world) => _world = world;
+
+    private void OnCollisionEnter(Collision other)
     {
-        [SerializeField] private float _speed;
-        private BulletsPool _pool;
-
-        public void SetParentPool(BulletsPool pool) => _pool = pool;
-
-        public void PoolBack() => _pool.StackBullet(this);
-
-        private void Update()
-        {
-            transform.position += Vector3.right * (Time.deltaTime * _speed);
-        }
+        ref var bulletEvent = ref _world.NewEntity().Get<BulletCollisionEvent>();
+        bulletEvent.Bullet = transform;
+        bulletEvent.Target = other.transform;
+        bulletEvent.CollisionPosition = transform.position;
     }
+}

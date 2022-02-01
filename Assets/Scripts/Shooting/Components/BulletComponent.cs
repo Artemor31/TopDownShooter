@@ -1,10 +1,8 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Shooting
+public struct BulletComponent
 {
-    public struct BulletComponent
-    {
-        public Transform BulletTransform;
-    }
+    public GameObject Bullet;
+    public float Speed;
 }

@@ -5,8 +5,7 @@ namespace PlayerGameplay.Components
     struct PlayerComponent
     {
         public Transform PlayerTransform;
-        public Rigidbody PlayerRigidbody;
+        public Transform WeaponTransform;
         public float PlayerSpeed;
-        public float PlayerVelocity;
     }
 }

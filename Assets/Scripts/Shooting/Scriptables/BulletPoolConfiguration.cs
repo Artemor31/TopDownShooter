@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
-namespace Pooling
+
+[CreateAssetMenu(fileName = "Pooling", menuName = "BulletPoolConfig", order = 0)]
+public class BulletPoolConfiguration : ScriptableObject
 {
-    [CreateAssetMenu(fileName = "Pooling", menuName = "BulletPoolConfig", order = 0)]
-    public class BulletPoolConfiguration : ScriptableObject
-    {
-        public int PoolSize;
-        public GameObject BulletPrefab;
-    }
+    public int PoolSize;
+    public GameObject BulletPrefab;
 }
+

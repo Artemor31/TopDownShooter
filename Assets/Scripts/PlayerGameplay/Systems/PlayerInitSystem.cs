@@ -17,10 +17,9 @@ namespace Ecs.Systems
 
             var playerGameObject = GameObject.FindWithTag("Player");
 
-            playerComponent.PlayerRigidbody = playerGameObject.GetComponent<Rigidbody>();
             playerComponent.PlayerSpeed = _configuraion.PlayerSpeed;
             playerComponent.PlayerTransform = playerGameObject.transform;
-            playerComponent.PlayerVelocity = _configuraion.PlayerVelocity;
+            playerComponent.WeaponTransform = playerGameObject.transform;
         }
     }
 }
