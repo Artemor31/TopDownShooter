@@ -12,6 +12,7 @@ sealed class BulletCollisionSystem : IEcsRunSystem
         foreach (var idx in _filter)
         {
             ref var collisionEvent = ref _filter.Get1(idx);
+            
             var bulletView = collisionEvent.Bullet.GetComponent<BulletView>();
             _bulletProvider.Collect(bulletView);
             

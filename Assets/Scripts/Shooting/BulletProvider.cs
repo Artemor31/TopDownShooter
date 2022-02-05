@@ -81,7 +81,8 @@ public class BulletProvider
         {
             if (_bullets.Count == 0)
             {
-                StackNewBullet();
+                var bullet = StackNewBullet();
+                CreateNewBulletEntity(bullet);
             }
 
             return _bullets.Pop();

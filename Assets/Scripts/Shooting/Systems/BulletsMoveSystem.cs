@@ -10,7 +10,10 @@ public class BulletsMoveSystem : IEcsRunSystem
     {
         foreach (var idx in _filter)
         {
-            var bulletComponent = _filter.Get1(idx);
+            ref var bulletComponent = ref _filter.Get1(idx);
+            if (bulletComponent.Bullet.activeInHierarchy == false) continue;
+            
+            bulletComponent.Bullet.transform.position += Time.deltaTime * Vector3.one * bulletComponent.Speed;
         }
     }
 }

@@ -381,7 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _configuraion: {fileID: 11400000, guid: 0bda3da705f70834ea4493f5d6776dcb, type: 2}
-  _pool: {fileID: 0}
+  _poolConfiguration: {fileID: 11400000, guid: 90dd56c0fc2b41f4e93c280cdd84525c, type: 2}
+  _bulletsConfiguration: {fileID: 11400000, guid: 4f5f3c725b3bb99408e00aeb29fb58be, type: 2}
 --- !u!4 &1781579697
 Transform:
   m_ObjectHideFlags: 0
