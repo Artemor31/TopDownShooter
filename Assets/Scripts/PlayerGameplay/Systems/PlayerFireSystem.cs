@@ -11,9 +11,9 @@ namespace PlayerGameplay.Systems
         private EcsFilter<FireButtonPressedEvent> _filter = default;
         private EcsFilter<PlayerComponent> _filterPlayer = default;
 
-        void IEcsRunSystem.Run()
+        public void Run()
         {
-            foreach (var idx in _filter)
+            foreach (var _ in _filter)
             {
                 foreach (var p in _filterPlayer)
                 {
